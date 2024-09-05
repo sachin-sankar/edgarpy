@@ -29,3 +29,20 @@ def getSubmissionsByCik(cik: str) -> List[Submission]:
     for subZiped in zip(data["form"], data["accessionNumber"]):
         submissions.append(Submission(form=subZiped[0], accessionNumber=subZiped[1]))
     return submissions
+
+
+def getXlsxUrl(cik: str, accessionNumber: str) -> str:
+    accessionNumber = accessionNumber.replace("-", "")
+    cik = cik.lstrip("0")
+    reqUrl = f"https://www.sec.gov/Archives/edgar/data/{cik}/{accessionNumber}/Financial_Report.xlsx"
+    resp = get(reqUrl, timeout=2000, headers=HEADERS)
+    match resp.status_code:
+        case 404:
+            raise FileNotFoundError
+        case 200:
+            pass
+        case _:
+            raise RuntimeError(
+                f"SECAPI call failed with status code {resp.status_code}"
+            )
+    return reqUrl
