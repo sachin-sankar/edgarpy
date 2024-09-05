@@ -64,8 +64,8 @@ accessionNumber : `str` - 18 Digit key for the submission.
 
 #### Attributes
 
-form : `str` - Form name of the submission if available
-accessionNumber : `str` - 18 Digit key for the submission.
+- form : `str` - Form name of the submission if available
+- accessionNumber : `str` - 18 Digit key for the submission.
 
 # Developing
 
