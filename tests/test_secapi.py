@@ -6,7 +6,7 @@ from edgarpy.secapi import getSubmissionsByCik
 
 
 def test_getSubmissionsByCik_fails_on_empty_cik():
-    with pytest.raises(InvalidCIK) as e_info:
+    with pytest.raises(InvalidCIK) as _:
         getSubmissionsByCik("")
 
 
