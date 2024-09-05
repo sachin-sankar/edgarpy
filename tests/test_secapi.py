@@ -1,8 +1,8 @@
 import pytest
 
-from edgarpy.exceptions import InvalidCIK
-from edgarpy.models import Submission
-from edgarpy.secapi import getSubmissionsByCik, getXlsxUrl
+from edgarpython.exceptions import InvalidCIK
+from edgarpython.models import Submission
+from edgarpython.secapi import getSubmissionsByCik, getXlsxUrl
 
 
 def test_getSubmissionsByCik_fails_on_empty_cik():

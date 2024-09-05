@@ -2,8 +2,8 @@ from typing import List
 
 from requests import get
 
-from edgarpy.exceptions import InvalidCIK
-from edgarpy.models import Submission
+from edgarpython.exceptions import InvalidCIK
+from edgarpython.models import Submission
 
 API_BASE = "https://data.sec.gov"
 USERAGENT = "Mozilla/5.0 (X11; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0"

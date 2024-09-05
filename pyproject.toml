@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "edgarpy"
+name = "edgarpython"
 version = "0.1.0"
 description = "Python Library to interact with the SEC Edgar files"
 authors = ["sachin-sankar <mail.sachinsankar@gmail.com>"]
