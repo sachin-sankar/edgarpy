@@ -12,7 +12,6 @@ HEADERS = {"User-Agent": USERAGENT}
 
 def getSubmissionsByCik(cik: str) -> List[Submission]:
     reqUrl = API_BASE + f"/submissions/CIK{cik}.json"
-    print(reqUrl)
     resp = get(reqUrl, timeout=5000, headers=HEADERS)
     match resp.status_code:
         case 404:
